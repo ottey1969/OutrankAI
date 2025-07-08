@@ -1,0 +1,6 @@
+{
+  "name": "outrankai-server",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
