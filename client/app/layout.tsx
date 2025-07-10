@@ -1,16 +1,22 @@
-// app/layout.tsx
-import './globals.css'
-import { ReactNode } from 'react'
+import './globals.css';
+import { ClerkProvider } from '@clerk/nextjs';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'OutrankAI',
-  description: 'AI-powered business ranking',
-}
+  description: 'AI-Powered Business Growth',
+};
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  )
+    <ClerkProvider>
+      <html lang="en">
+        <body className="bg-white text-black">{children}</body>
+      </html>
+    </ClerkProvider>
+  );
 }
