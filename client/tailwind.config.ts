@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 const config = {
   content: [
-    './app/**/*.{ts,tsx}',
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',     // ✅ for app router
+    './pages/**/*.{ts,tsx}',   // optional for pages/
+    './components/**/*.{ts,tsx}', // if you add components
   ],
   theme: {
     extend: {},
